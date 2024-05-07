@@ -1,13 +1,4 @@
 # Polling-Api-System
-Description :
-1. We can create question.
-2. We can delete Question.
-3. We can view question
-4. We can create option for question
-5. We can delete option
-6. we can vote to particular option for a particular Question .
-***
-
 ## Requirements
 For development, you will only need Node.js and a node global package installed in your environement and mongodb for database.
 
@@ -38,7 +29,7 @@ For development, you will only need Node.js and a node global package installed 
 ## Install
 
 ```
-$ git clone https://github.com/RAHULKUMARNATHU/polling-api-system
+$ git clone https://github.com/manichandra95151/Polling-Api
 $ cd polling-api-system
 $ npm install
 ```
@@ -48,20 +39,3 @@ $ npm install
 $ npm start
 
 ```
-
-## API's
-
-* Create Question :-
-``` localhost:8000/api/v1/questions/create/ ```
-
-* Create Option :-
-``` localhost:8000/api/v1/options/:id/options/create/ ```
-
-* View Question :-
-``` localhost:8000/api/v1/questions/:id/ ```
-
-* Delete Option :-
-``` localhost:8000/api/v1/options/:id/delete ```
-
-* Delete Question :-
-``` localhost:8000/api/v1/questions/:id/delete ```
