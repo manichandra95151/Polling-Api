@@ -1,14 +1,17 @@
-const mongoose = require("mongoose");
-// mongoDB atlas uri
-const URI =
-  "mongodb+srv://manii:123@cluster0.trz5bjq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-// connecting to mongoDB atlas
-const db = async () => {
-  await mongoose.connect(URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-  console.log("Connected to DataBase :: MongoDB");
-};
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
+
+mongoose.connect(process.env.MONGO_DB);
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, "Error connecting to MongoDB"));
+
+
+db.once('open', function(){
+    console.log('Connected to Database :: MongoDB');
+});
+
 module.exports = db;
